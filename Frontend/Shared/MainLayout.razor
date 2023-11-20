@@ -1,0 +1,45 @@
+﻿@inherits LayoutComponentBase
+
+<PageTitle>Plan Alimentario</PageTitle>
+
+<RadzenComponents />
+
+<RadzenLayout>
+    <RadzenHeader>
+        <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Gap="0">
+            <RadzenSidebarToggle Click="@(() => sidebar1Expanded = !sidebar1Expanded)" />
+            <RadzenText Text="BabyNutriPlan" TextStyle="TextStyle.DisplayH6" Style="color: white; margin: 0px;" />
+        </RadzenStack>
+    </RadzenHeader>
+
+    <RadzenSidebar Style="width:auto;" class="sidebar">
+        <RadzenPanelMenu
+            DisplayStyle="@(sidebar1Expanded ? MenuItemDisplayStyle.IconAndText : MenuItemDisplayStyle.Icon)"
+            ShowArrow="false">
+            <RadzenPanelMenuItem Text="Home" Icon="home" Path="/" />
+            <RadzenPanelMenuItem Text="UserAdministration" Icon="people_alt" Path="/useradmin" />
+            <RadzenPanelMenuItem Text="Patient Care Management" Icon="event" Path="/patientcare" />
+            <RadzenPanelMenuItem Text="Food Inventory Management" Icon="flag" Path="/foodinventory" />
+            <RadzenPanelMenuItem Text="Incident Handling System" Icon="groups" Path="/incidenthandling" />
+            <RadzenPanelMenuItem Text="Nutrition Plan Creation" Icon="group_add" Path="/nutritionplan" />
+            <RadzenPanelMenuItem Text="History Checkout" Icon="food_bank" Path="/historycheckout" />
+        </RadzenPanelMenu>
+    </RadzenSidebar>
+
+    <RadzenBody>
+        <div class="content">
+            <div class="main-content">
+                @Body
+            </div>
+        </div>
+
+        <div class="footer">
+            <!-- Agrega contenido relevante para el footer aquí -->
+        </div>
+    </RadzenBody>
+
+</RadzenLayout>
+
+@code {
+    bool sidebar1Expanded = true;
+}

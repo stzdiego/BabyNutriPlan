@@ -1,0 +1,14 @@
+@page "/nutritionplan"
+
+<PageTitle>Nutrition Plan</PageTitle>
+
+<RadzenStack>
+    <RadzenCard>
+        <RadzenText Text="Incidents" Size="H3" />
+        <RadzenDataGrid TItem="Plan" Data="_plans" ShowPagingSummary=true LoadData="LoadPlans">
+            <Columns>
+                <RadzenDataGridColumn TItem="Patient" Property="Name" Title="Name" />
+            </Columns>
+        </RadzenDataGrid>
+    </RadzenCard>
+</RadzenStack>

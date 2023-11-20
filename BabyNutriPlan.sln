@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frontend", "Frontend\Frontend.csproj", "{492E52C1-5256-4D64-BAEE-23ABA335AE1D}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthenticationHubService", "AuthenticationHubService\AuthenticationHubService.csproj", "{61C2CD8B-A7DD-4C5A-B7E6-BC9E02CE9DA7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BabyNutriPlan.Shared", "BabyNutriPlan.Shared\BabyNutriPlan.Shared.csproj", "{5F29390B-50E5-4C86-9E61-0F702C2E3112}"
@@ -22,6 +20,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NutritionPlanCreationService", "NutritionPlanCreationService\NutritionPlanCreationService.csproj", "{666186A2-388B-45A1-8175-80E766D1ABFA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HistoryCheckupService", "HistoryCheckupService\HistoryCheckupService.csproj", "{F70F2DE4-6064-4A96-8C19-01E9C2132588}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frontend", "Frontend\Frontend.csproj", "{5B6BC10A-7543-490B-B254-101DC4260228}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -76,5 +76,9 @@ Global
 		{F70F2DE4-6064-4A96-8C19-01E9C2132588}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F70F2DE4-6064-4A96-8C19-01E9C2132588}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F70F2DE4-6064-4A96-8C19-01E9C2132588}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B6BC10A-7543-490B-B254-101DC4260228}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B6BC10A-7543-490B-B254-101DC4260228}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B6BC10A-7543-490B-B254-101DC4260228}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B6BC10A-7543-490B-B254-101DC4260228}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

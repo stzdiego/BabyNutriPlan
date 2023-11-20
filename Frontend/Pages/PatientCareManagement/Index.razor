@@ -1,0 +1,25 @@
+@page "/patientcare"
+
+<PageTitle>Patient Care</PageTitle>
+
+<RadzenStack>
+    <RadzenCard>
+        <RadzenText Text="Patients" Size="H3" />
+        <RadzenDataGrid TItem="Patient" Data="_patients" ShowPagingSummary=true LoadData="LoadPatients">
+            <Columns>
+                <RadzenDataGridColumn TItem="Patient" Property="Name" Title="Name" />
+            </Columns>
+        </RadzenDataGrid>
+    </RadzenCard>
+
+    <hr />
+
+    <RadzenCard>
+        <RadzenText Text="Attendants" Size="H3" />
+        <RadzenDataGrid TItem="Attendant" Data="_attendants" ShowPagingSummary=true LoadData="LoadAttendants">
+            <Columns>
+                <RadzenDataGridColumn TItem="Attendant" Property="Name" Title="Name" />
+            </Columns>
+        </RadzenDataGrid>
+    </RadzenCard>
+</RadzenStack>

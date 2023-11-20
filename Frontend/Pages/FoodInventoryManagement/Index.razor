@@ -1,0 +1,25 @@
+@page "/foodinventory"
+
+<PageTitle>Food Inventory</PageTitle>
+
+<RadzenStack>
+    <RadzenCard>
+        <RadzenText Text="Food Groups" Size="H3" />
+        <RadzenDataGrid TItem="Food" Data="_food" ShowPagingSummary=true LoadData="LoadFood">
+            <Columns>
+                <RadzenDataGridColumn TItem="Patient" Property="Name" Title="Name" />
+            </Columns>
+        </RadzenDataGrid>
+    </RadzenCard>
+
+    <hr />
+
+    <RadzenCard>
+        <RadzenText Text="Food" Size="H3" />
+        <RadzenDataGrid TItem="FoodGroup" Data="_foodgroups" ShowPagingSummary=true LoadData="LoadFoodGroups">
+            <Columns>
+                <RadzenDataGridColumn TItem="FoodGroup" Property="Name" Title="Name" />
+            </Columns>
+        </RadzenDataGrid>
+    </RadzenCard>
+</RadzenStack>

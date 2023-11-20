@@ -1,0 +1,14 @@
+@page "/incidenthandling"
+
+<PageTitle>Incident Handling</PageTitle>
+
+<RadzenStack>
+    <RadzenCard>
+        <RadzenText Text="Incidents" Size="H3" />
+        <RadzenDataGrid TItem="Incident" Data="_incidents" ShowPagingSummary=true LoadData="LoadIncidents">
+            <Columns>
+                <RadzenDataGridColumn TItem="Patient" Property="Name" Title="Name" />
+            </Columns>
+        </RadzenDataGrid>
+    </RadzenCard>
+</RadzenStack>

@@ -5,6 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Frontend",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "launchBrowser": {
+                "enabled": true
+            },
+            "program": "${workspaceFolder}/Frontend/bin/Debug/net7.0/Frontend.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Frontend"
+        },
+        {
             "name": "AuthenticationHubService",
             "type": "coreclr",
             "request": "launch",
@@ -12,7 +24,7 @@
             "launchBrowser": {
                 "enabled": true
             },
-            "program": "${workspaceFolder}/AuthenticationHubService/bin/Debug/net8.0/AuthenticationHubService.dll",
+            "program": "${workspaceFolder}/AuthenticationHubService/bin/Debug/net7.0/AuthenticationHubService.dll",
             "args": [],
             "cwd": "${workspaceFolder}/AuthenticationHubService"
         },

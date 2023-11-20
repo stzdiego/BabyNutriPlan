@@ -1,0 +1,154 @@
+@page "/pediatricians/add"
+@inject IJSRuntime JSRuntime
+@using BabyNutriPlan.Shared.Entities
+@using Radzen.Blazor.Rendering
+
+<RadzenStack Gap="1rem">
+    <RadzenTemplateForm TItem="Pediatrician" Data="_pediatrician" Submit="OnSubmit" InvalidSubmit="OnInvalidSubmit">
+        <RadzenStack Gap="1rem">
+            <RadzenText Text="Patient details" TextStyle="TextStyle.H6" />
+            <RadzenRow>
+                <RadzenColumn Size="12" SizeSM="4">
+                    <RadzenStack>
+                        <RadzenFormField Text="First name *" Variant="Variant.Flat">
+                            <RadzenTextBox />
+                            <RadzenRequiredValidator Component="FirstName" />
+                        </RadzenFormField>
+                    </RadzenStack>
+                </RadzenColumn>
+                <RadzenColumn Size="12" SizeSM="4">
+                    <RadzenStack>
+                        <RadzenFormField Text="Last name *" Variant="Variant.Flat">
+                            <RadzenTextBox />
+                            <RadzenRequiredValidator Component="LastName" />
+                        </RadzenFormField>
+                    </RadzenStack>
+                </RadzenColumn>
+                <RadzenColumn Size="12" SizeSM="4">
+                    <RadzenStack>
+                        <RadzenFormField Text="Gender *" Variant="Variant.Flat">
+                            <RadzenDropDown TValue="EnumIdentificationType" Data="_genders" />
+                            <RadzenRequiredValidator Component="Gender" />
+                        </RadzenFormField>
+                    </RadzenStack>
+                </RadzenColumn>
+            </RadzenRow>
+            <RadzenRow>
+                <RadzenColumn Size="12" SizeSM="4">
+                    <RadzenStack>
+                        <RadzenFormField Text="Identification Type *" Variant="Variant.Flat">
+                            <RadzenDropDown TValue="EnumIdentificationType" Data="_identificationsTypes" />
+                            <RadzenRequiredValidator Component="IdentificationType" />
+                        </RadzenFormField>
+                    </RadzenStack>
+                </RadzenColumn>
+                <RadzenColumn Size="12" SizeSM="8">
+                    <RadzenStack>
+                        <RadzenFormField Text="Identification *" Variant="Variant.Flat">
+                            <RadzenNumeric TValue="int" Format="#########" />
+                            <RadzenRequiredValidator Component="Id" />
+                        </RadzenFormField>
+                    </RadzenStack>
+                </RadzenColumn>
+            </RadzenRow>
+            <RadzenRow>
+                <RadzenColumn Size="12" SizeSM="4">
+                    <RadzenStack>
+                        <RadzenFormField Text="Birth date *" Variant="Variant.Flat">
+                            <RadzenDatePicker TValue="DateTime" />
+                            <RadzenRequiredValidator Component="BirthDate" />
+                        </RadzenFormField>
+                    </RadzenStack>
+                </RadzenColumn>
+                <RadzenColumn Size="12" SizeSM="4">
+                    <RadzenStack>
+                        <RadzenFormField Text="Tel" Variant="Variant.Flat">
+                            <RadzenTextBox />
+                        </RadzenFormField>
+                    </RadzenStack>
+                </RadzenColumn>
+                <RadzenColumn Size="12" SizeSM="4">
+                    <RadzenStack>
+                        <RadzenFormField Text="Cel *" Variant="Variant.Flat">
+                            <RadzenTextBox />
+                            <RadzenRequiredValidator Component="Cel" />
+                        </RadzenFormField>
+                    </RadzenStack>
+                </RadzenColumn>
+            </RadzenRow>
+            <RadzenRow>
+                <RadzenColumn Size="12" SizeSM="4">
+                    <RadzenStack>
+                        <RadzenFormField Text="Country *" Variant="Variant.Flat">
+                            <RadzenDropDown TValue="Country" />
+                            <RadzenRequiredValidator Component="Country" />
+                        </RadzenFormField>
+                    </RadzenStack>
+                </RadzenColumn>
+                <RadzenColumn Size="12" SizeSM="4">
+                    <RadzenStack>
+                        <RadzenFormField Text="State *" Variant="Variant.Flat">
+                            <RadzenDropDown TValue="State" />
+                            <RadzenRequiredValidator Component="State" />
+                        </RadzenFormField>
+                    </RadzenStack>
+                </RadzenColumn>
+                <RadzenColumn Size="12" SizeSM="4">
+                    <RadzenStack>
+                        <RadzenFormField Text="City *" Variant="Variant.Flat">
+                            <RadzenDropDown TValue="City" />
+                            <RadzenRequiredValidator Component="City" />
+                        </RadzenFormField>
+                    </RadzenStack>
+                </RadzenColumn>
+            </RadzenRow>
+            <RadzenRow>
+                <RadzenColumn Size="12" SizeSM="4">
+                    <RadzenStack>
+                        <RadzenFormField Text="Neighborhood" Variant="Variant.Flat">
+                            <RadzenTextBox />
+                        </RadzenFormField>
+                    </RadzenStack>
+                </RadzenColumn>
+                <RadzenColumn Size="12" SizeSM="8">
+                    <RadzenStack>
+                        <RadzenFormField Text="Address *" Variant="Variant.Flat">
+                            <RadzenTextBox />
+                            <RadzenRequiredValidator Component="Address" />
+                        </RadzenFormField>
+                    </RadzenStack>
+                </RadzenColumn>
+            </RadzenRow>
+
+            <hr />
+
+            <RadzenText Text="Attachs" TextStyle="TextStyle.H6" />
+
+            <RadzenRow>
+                <RadzenColumn Size="12" SizeSM="6">
+                    <RadzenStack>
+                        <RadzenCard>
+                            <RadzenText Text="Photo" TextStyle="TextStyle.H6" />
+                            <RadzenFileInput @bind-Value=_filePhoto @bind-FileSize=_fileSizePhoto 
+                            TValue="string" Placeholder="Select file" class="w-100" />
+                        </RadzenCard>
+                    </RadzenStack>
+                </RadzenColumn>
+                <RadzenColumn Size="12" SizeSM="6">
+                    <RadzenStack>
+                        <RadzenCard>
+                            <RadzenText Text="Document" TextStyle="TextStyle.H6" />
+                            <RadzenFileInput @bind-Value=_fileDocument @bind-FileSize=_fileSizeDocument 
+                            TValue="string" Placeholder="Select file" class="w-100" />
+                        </RadzenCard>
+                    </RadzenStack>
+                </RadzenColumn>
+            </RadzenRow>
+
+            <RadzenStack Orientation="Orientation.Horizontal">
+                <RadzenButton Text="Add patient" ButtonType="ButtonType.Submit" />
+                <RadzenButton Text="Cancel" ButtonType="ButtonType.Button" />
+            </RadzenStack>
+        </RadzenStack>
+    </RadzenTemplateForm>
+</RadzenStack>
