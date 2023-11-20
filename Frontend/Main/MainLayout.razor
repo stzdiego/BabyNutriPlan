@@ -1,0 +1,95 @@
+﻿@inherits LayoutComponentBase
+
+<PageTitle>BabyNutriPlan</PageTitle>
+
+<RadzenComponents />
+
+<RadzenLayout>
+    <RadzenHeader>
+        <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Gap="0">
+            <RadzenSidebarToggle Click="@(() => _sidebar1Expanded = !_sidebar1Expanded)" />
+            <RadzenText Text="Food Plan" TextStyle="TextStyle.DisplayH6" Style="color: white; margin: 0px;" />
+            <div class="profile-menu">
+                <RadzenMenu>
+                    <RadzenProfileMenu>
+                        <Template>
+                            <RadzenStack Orientation="Orientation.Horizontal" Gap="0.3rem">
+                                <RadzenStack Orientation="Orientation.Vertical" Gap="0rem">
+                                    <RadzenText TextStyle="TextStyle.DisplayH6" Style="color: white; font-size: 1rem; margin: 0px;" Text="John Doe" />
+                                    <RadzenText TextStyle="TextStyle.Overline" Style="color: white; font-size: 0.5rem; margin: 0px;" Text="Administrator" />
+                                </RadzenStack>
+                                <RadzenImage Path="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50"
+                                    Style="border-radius: 14px;" class="custom-gravatar" />
+                            </RadzenStack>
+                        </Template>
+                        <ChildContent>
+                            <RadzenProfileMenuItem Text="Profile" />
+                            <RadzenProfileMenuItem Text="Log out" />
+                        </ChildContent>
+                    </RadzenProfileMenu>
+                </RadzenMenu>
+            </div>
+        </RadzenStack>
+    </RadzenHeader>
+
+    <RadzenSidebar Style="width:auto;" class="sidebar">
+        <RadzenPanelMenu
+            DisplayStyle="@(_sidebar1Expanded ? MenuItemDisplayStyle.IconAndText : MenuItemDisplayStyle.Icon)"
+            ShowArrow="false">
+            <RadzenPanelMenuItem Text="Home" Icon="home" Path="/" />
+            <RadzenPanelMenuItem Text="Patient Care Management" Icon="people_alt" Path="/patients" />
+            <RadzenPanelMenuItem Text="Food Inventory Management" Icon="event" Path="/foodplans" />
+            <RadzenPanelMenuItem Text="Nutrition Plan Creation " Icon="flag" Path="/incidents" />
+            <RadzenPanelMenuItem Text="Incident Handling System" Icon="groups" Path="/attendants" />
+            <RadzenPanelMenuItem Text="History Checkup" Icon="group_add" Path="/pediatricians" />
+            <RadzenPanelMenuItem Text="User Administration" Icon="food_bank" Path="/foodgroups" />
+            <RadzenPanelMenuItem Text="Food" Icon="restaurant" Path="/food" />
+        </RadzenPanelMenu>
+    </RadzenSidebar>
+
+    <RadzenBody>
+        <div class="content">
+            <div class="main-content">
+                @Body
+            </div>
+        </div>
+
+        <div class="footer">
+            <!-- Agrega contenido relevante para el footer aquí -->
+        </div>
+    </RadzenBody>
+
+</RadzenLayout>
+
+<style>
+    .sidebar {
+    width: 14rem;
+    background-color: #f8f9fa;
+}
+
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f8f9fa;
+}
+
+.profile-menu {
+    margin-left: auto;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+    padding: 1rem;
+}
+
+.custom-gravatar {
+    width: 28px;
+    height: 28px;
+}
+</style>

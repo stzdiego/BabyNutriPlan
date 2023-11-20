@@ -1,0 +1,92 @@
+{
+    // Use IntelliSense para saber los atributos posibles.
+    // Mantenga el puntero para ver las descripciones de los existentes atributos.
+    // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "AuthenticationHubService",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "launchBrowser": {
+                "enabled": true
+            },
+            "program": "${workspaceFolder}/AuthenticationHubService/bin/Debug/net8.0/AuthenticationHubService.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/AuthenticationHubService"
+        },
+        {
+            "name": "UserAdministrationService",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "launchBrowser": {
+                "enabled": true
+            },
+            "program": "${workspaceFolder}/UserAdministrationService/bin/Debug/net7.0/UserAdministrationService.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/UserAdministrationService"
+        },
+        {
+            "name": "PatientCareManagementService",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "launchBrowser": {
+                "enabled": true
+            },
+            "program": "${workspaceFolder}/PatientCareManagementService/bin/Debug/net7.0/PatientCareManagementService.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/PatientCareManagementService"
+        },
+        {
+            "name": "FoodInventoryManagementService",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "launchBrowser": {
+                "enabled": true
+            },
+            "program": "${workspaceFolder}/FoodInventoryManagementService/bin/Debug/net7.0/FoodInventoryManagementService.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/FoodInventoryManagementService"
+        },
+        {
+            "name": "IncidentHandlingSystemService",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "launchBrowser": {
+                "enabled": true
+            },
+            "program": "${workspaceFolder}/IncidentHandlingSystemService/bin/Debug/net7.0/IncidentHandlingSystemService.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/IncidentHandlingSystemService"
+        },
+        {
+            "name": "NutritionPlanCreationService",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "launchBrowser": {
+                "enabled": true
+            },
+            "program": "${workspaceFolder}/NutritionPlanCreationService/bin/Debug/net7.0/NutritionPlanCreationService.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/NutritionPlanCreationService"
+        },
+        {
+            "name": "HistoryCheckupService",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "launchBrowser": {
+                "enabled": true
+            },
+            "program": "${workspaceFolder}/HistoryCheckupService/bin/Debug/net7.0/HistoryCheckupService.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/HistoryCheckupService"
+        }
+    ]
+}
